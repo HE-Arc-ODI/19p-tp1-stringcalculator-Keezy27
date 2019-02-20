@@ -33,22 +33,13 @@ public class StringCalculatorTest {
         assertThat(sc.Add(), is(expected));
     }
 
+    @Test
     public void testAdd2para() {
         // Arrange
         StringCalculator sc = new StringCalculator();
         int expected = 5;
         // Act
-        int actual = sc.Add("3", "2");
-        // Assert
-        assertThat(actual, is(expected));
-    }
-    
-    public void testAdd3para() {
-        // Arrange
-        StringCalculator sc = new StringCalculator();
-        int expected = 15;
-        // Act
-        int actual = sc.Add("3", "2", "10");
+        int actual = sc.Add("3,2");
         // Assert
         assertThat(actual, is(expected));
     }
