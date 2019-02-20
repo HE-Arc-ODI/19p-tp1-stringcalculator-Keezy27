@@ -59,4 +59,12 @@ public class StringCalculatorTest {
         int actual = sc.Add("2,2,2,0,2,2,2,4,1,1");
         assertThat(actual,is(expected));
     }
+
+    @Test
+    public  void testWithCRandLN(){
+        StringCalculator sc = new StringCalculator();
+        int expected = 7;
+        int actual = sc.Add("2,2\n3");
+        assertThat(actual,is(expected));
+    }
 }
