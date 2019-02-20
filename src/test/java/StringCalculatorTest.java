@@ -51,4 +51,12 @@ public class StringCalculatorTest {
         int actual = sc.Add("1,1,1,1,1,1,1,1,1,1,2,2,2,2");
         assertThat(actual,is(expected));
     }
+
+    @Test
+    public  void secondTestNparameters(){
+        StringCalculator sc = new StringCalculator();
+        int expected = 18;
+        int actual = sc.Add("2,2,2,0,2,2,2,4,1,1");
+        assertThat(actual,is(expected));
+    }
 }
