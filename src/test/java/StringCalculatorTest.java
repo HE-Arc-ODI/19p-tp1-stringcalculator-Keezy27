@@ -45,7 +45,7 @@ public class StringCalculatorTest {
     }
 
     @Test
-    public  void testNparameters(){
+    public  void testNpara(){
         StringCalculator sc = new StringCalculator();
         int expected = 18;
         int actual = sc.Add("1,1,1,1,1,1,1,1,1,1,2,2,2,2");
@@ -53,18 +53,26 @@ public class StringCalculatorTest {
     }
 
     @Test
-    public  void secondTestNparameters(){
+    public  void testNparaBigger10(){
         StringCalculator sc = new StringCalculator();
-        int expected = 18;
-        int actual = sc.Add("2,2,2,0,2,2,2,4,1,1");
+        int expected = 147;
+        int actual = sc.Add("20,14,17,6+90");
         assertThat(actual,is(expected));
     }
 
     @Test
-    public  void testWithCRandLN(){
+    public  void testWithNL(){
         StringCalculator sc = new StringCalculator();
         int expected = 7;
         int actual = sc.Add("2,2\n3");
+        assertThat(actual,is(expected));
+    }
+
+    @Test
+    public void testMultiDelemiter(){
+        StringCalculator sc = new StringCalculator();
+        int expected = 90;
+        int actual = sc.Add("10,20,30//;\n5;5;20");
         assertThat(actual,is(expected));
     }
 }
