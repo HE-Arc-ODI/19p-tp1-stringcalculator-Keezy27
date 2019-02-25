@@ -75,4 +75,11 @@ public class StringCalculatorTest {
         int actual = sc.Add("10,20,30//;\n5;5;20");
         assertThat(actual,is(expected));
     }
+
+    @Test
+    public void testNegNumber(){
+        StringCalculator sc = new StringCalculator();
+        int expected = 48;
+        int actual = sc.Add("68-20");
+    }
 }
